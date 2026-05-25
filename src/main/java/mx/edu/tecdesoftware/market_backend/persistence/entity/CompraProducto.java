@@ -2,6 +2,7 @@ package mx.edu.tecdesoftware.market_backend.persistence.entity;
 
 
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
@@ -10,18 +11,18 @@ import jakarta.persistence.Table;
 
 public class CompraProducto {
 
-    @Embeddable
-    private CompraProductoPk id;
+    @EmbeddedId
+    private CompraProductoPK id;
 
     private Integer cantidad;
     private Double totoa;
     private Boolean estado;
 
-    public CompraProductoPk getId() {
+    public CompraProductoPK getId() {
         return id;
     }
 
-    public void setId(CompraProductoPk id) {
+    public void setId(CompraProductoPK id) {
         this.id = id;
     }
 
