@@ -3,6 +3,7 @@ package mx.edu.tecdesoftware.market_backend.persistence.entity;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table (name = "compras")
@@ -24,6 +25,17 @@ public class Compra {
 
     private String comentario;
     private String estado;
+
+    //Cliente: muchas compras a un cliente
+    @ManyToOne
+    @JoinColumn(name =  "id_cliente",
+    insertable = false, updatable = false)
+    private Cliente cliente;
+
+    //Compras_productos: una compra muchos productos (referencia)
+    //la unión se hace en el archivo en dónde está la llave foranea
+    @OneToMany(mappedBy = "id_compra")
+    private List<CompraProducto> productos;
 
     public Integer getIdCompra() {
         return idCompra;
