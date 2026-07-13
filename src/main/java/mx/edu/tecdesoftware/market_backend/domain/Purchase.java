@@ -1,8 +1,7 @@
 package mx.edu.tecdesoftware.market_backend.domain;
 
-import mx.edu.tecdesoftware.market_backend.persistence.entity.Cliente;
-
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class Purchase {
     private int purchaseId;
@@ -11,33 +10,26 @@ public class Purchase {
     private String payment;
     private String comment;
     private String active;
-    private Customer customer;
+    private List<PurchaseItem> items; // La lista de productos de la compra
 
     public int getPurchaseId() { return purchaseId; }
-
     public void setPurchaseId(int purchaseId) { this.purchaseId = purchaseId; }
 
-    public String getClientId() { return customerId; }
-
-    public void setClientId(String clientId) { this.customerId = clientId; }
+    public String getCustomerId() { return customerId; }
+    public void setCustomerId(String customerId) { this.customerId = customerId; }
 
     public LocalDateTime getDate() { return date; }
-
     public void setDate(LocalDateTime date) { this.date = date; }
 
     public String getPayment() { return payment; }
-
     public void setPayment(String payment) { this.payment = payment; }
 
     public String getComment() { return comment; }
-
     public void setComment(String comment) { this.comment = comment; }
 
     public String getActive() { return active; }
-
     public void setActive(String active) { this.active = active; }
 
-    public Customer getCustomer() { return customer; }
-
-    public void setCustomer(Customer customer) { this.customer = customer; }
+    public List<PurchaseItem> getItems() { return items; }
+    public void setItems(List<PurchaseItem> items) { this.items = items; }
 }
