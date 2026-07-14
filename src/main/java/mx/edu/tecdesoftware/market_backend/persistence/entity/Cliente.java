@@ -16,13 +16,13 @@ public class Cliente {
     private String nombre;
     private String apellidos;
     private String celular;
-    private Integer direccion;
+    private String direccion;
 
     @Column(name = "correo_electronico")
     private String CorreoElectronico;
     //Un cliete tiene muchas compras
-    @OneToMany(mappedBy = "id_cliente")
-    private List<Compra> compras;
+    @OneToMany(mappedBy = "cliente")
+    private List<Compra>compras;
 
     public String getId() { return id; }
 
@@ -40,9 +40,9 @@ public class Cliente {
 
     public void setCelular(String celular) { this.celular = celular; }
 
-    public Integer getDireccion() { return direccion; }
+    public String getDireccion() { return direccion; }
 
-    public void setDireccion(Integer direccion) { this.direccion = direccion; }
+    public void setDireccion(String direccion) { this.direccion = direccion; }
 
     public String getCorreoElectronico() { return CorreoElectronico; }
 

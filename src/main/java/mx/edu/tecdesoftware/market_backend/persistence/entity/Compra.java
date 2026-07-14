@@ -34,7 +34,7 @@ public class Compra {
 
     //Compras_productos: una compra muchos productos (referencia)
     //la unión se hace en el archivo en dónde está la llave foranea
-    @OneToMany(mappedBy = "id_compra")
+    @OneToMany(mappedBy = "compra")
     private List<CompraProducto> productos;
 
     public Integer getIdCompra() {

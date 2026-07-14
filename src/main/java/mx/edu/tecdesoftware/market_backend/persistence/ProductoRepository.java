@@ -32,7 +32,7 @@ public class ProductoRepository implements ProductRepository {
     }
 
     public Optional<List<Product>> getScarceProducts(int quantity) {
-        Optional<List<Producto>> productos= productoCrudRepository.findByIdCantidadStocklessThanAndEStado
+        Optional<List<Producto>> productos= productoCrudRepository.findByCantidadStockLessThanAndEstado
                 (quantity, true);
         return Optional.of(productMapper.toProducts(productos.get()));
     }
