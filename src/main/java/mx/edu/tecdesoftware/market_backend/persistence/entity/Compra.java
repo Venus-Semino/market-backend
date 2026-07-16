@@ -34,7 +34,8 @@ public class Compra {
 
     //Compras_productos: una compra muchos productos (referencia)
     //la unión se hace en el archivo en dónde está la llave foranea
-    @OneToMany(mappedBy = "compra")
+    @OneToMany(mappedBy = "compra",
+    cascade = CascadeType.ALL)
     private List<CompraProducto> productos;
 
     public Integer getIdCompra() {

@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class Purchase {
-    private int purchaseId;
+    private Integer purchaseId;
     private String customerId;
     private LocalDateTime date;
     private String payment;

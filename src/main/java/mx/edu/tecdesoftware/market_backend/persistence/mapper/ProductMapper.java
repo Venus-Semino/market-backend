@@ -18,9 +18,10 @@ public interface ProductMapper {
             @Mapping(source = "precioVenta", target = "price"),
             @Mapping(source = "cantidadStock", target = "stock"),
             @Mapping(source = "estado", target = "active"),
-            @Mapping(source = "categoria", target = "category")
+            @Mapping(source = "categoria", target = "category"),
+            @Mapping(source = "idCategoria", target = "categoryId")
     })
-    Product toProduct(Producto producto);
+    Product toProduct(Producto produto);
     List<Product> toProducts(List<Producto> productos);
 
     @InheritInverseConfiguration

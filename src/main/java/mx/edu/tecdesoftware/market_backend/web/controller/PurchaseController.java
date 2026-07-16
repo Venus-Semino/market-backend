@@ -22,10 +22,10 @@ public class PurchaseController {
     }
 
     @GetMapping("/client/{id}")
-    public ResponseEntity<List<Purchase>> getByClient(@PathVariable("id") String clientId) {
-        return purchaseService.getByClient(clientId)
-                .map(purchases -> new ResponseEntity<>(purchases, HttpStatus.OK))
-                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    public ResponseEntity<Purchase> getByCliente(@PathVariable("id") String clientId) {
+        return purchaseService.getByClientId(clientId)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping("/save")

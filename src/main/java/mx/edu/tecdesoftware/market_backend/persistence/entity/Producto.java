@@ -53,9 +53,9 @@ public class Producto {
 
     public void setNombre(String nombre) { this.nombre = nombre; }
 
-    public Integer getId_categoria() { return idCategoria; }
+    public Integer getIdCategoria() { return idCategoria; }
 
-    public void setId_categoria(Integer id_categoria) { this.idCategoria = id_categoria; }
+    public void setIdCategoria(Integer id_categoria) { this.idCategoria = id_categoria; }
 
     public String getCodigoBarras() { return codigoBarras; }
 

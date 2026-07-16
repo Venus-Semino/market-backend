@@ -12,7 +12,7 @@ public class CompraProducto {
     private CompraProductoPK id;
 
     private Integer cantidad;
-    private Double totoa;
+    private Double total;
     private Boolean estado;
 
     //Producto: todos los productos que hay en una compra
@@ -42,12 +42,12 @@ public class CompraProducto {
         this.cantidad = cantidad;
     }
 
-    public Double getTotoa() {
-        return totoa;
+    public Double getTotal() {
+        return total;
     }
 
-    public void setTotoa(Double totoa) {
-        this.totoa = totoa;
+    public void setTotal(Double totoa) {
+        this.total = total;
     }
 
     public Boolean getEstado() {
